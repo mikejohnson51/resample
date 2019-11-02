@@ -1,0 +1,24 @@
+Package: resample
+Type: Package
+Title: Resample Categorical Raster Data
+Version: 0.0.1
+Authors@R: person(given = "Mike", family = "Johnson", role = c("aut", "cre"), email = "jmj00@ucsb.edu", comment = c(ORCID = "0000-0002-5288-8350"))
+Maintainer: Mike Johnson <jmj00@ucsb.edu>
+BugReports: https://github.com/mikejohnson51/resample/issues
+Description: Experimental method for resampling catergorical raster data to coarser resolutions.
+Depends:
+    R(>= 3.3.0),
+    AOI
+Imports:
+    dplyr,
+    raster,
+    sf(>= 0.6-0),
+    tabularaster,
+    tidyr
+Suggests:
+    testthat,
+    covr
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
