@@ -18,7 +18,7 @@ n = resampleData(input, output, 0, method = 'nn')
 a = resampleData(input, output, 0, method = 'area')
 m = resampleData(input, output, 0, method = 'maj')
 
-b = brick(n,a,m) %>% setNames(c("n", "a", "m"))
+b = brick(n,a,m) %>% setNames(c("Nearest Neighbor", "Areal", "Majority Rule"))
 
 plot(b, breaks = col_lu$nlcd.code, col = col_lu$color)
 
