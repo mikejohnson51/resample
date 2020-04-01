@@ -1,5 +1,7 @@
 # Resampling in R
 
+[![Build Status](https://travis-ci.com/mikejohnson51/resample.svg?token=pr7qqoRsTFSB28qcSF5n&branch=master)](https://travis-ci.com/mikejohnson51/resample)
+
 This code is part of a working paper focused on resampling strategies for catigorical data.
 
 The basic workflow is as follows:
