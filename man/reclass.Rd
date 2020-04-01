@@ -11,7 +11,7 @@ reclass(areal_per, output_count, no_data = 0)
 
 \item{output_count}{the number of target cells for each class in the output cell}
 
-\item{no_data}{a value to set unclassified cells to}
+\item{no_data}{the no data value in the native dataset}
 }
 \value{
 a vector

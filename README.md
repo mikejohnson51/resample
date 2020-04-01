@@ -1,21 +1,25 @@
 # Resampling in R
 
-This code is part of a working paper focused on resampling strategies for Hydrologic Models.
+This code is part of a working paper focused on resampling strategies for catigorical data.
 
 The basic workflow is as follows:
 
 ```{r}
 
+# Start with a native high resolution dataset
 nlcd = raster("./nlcd_2011_landcover_2011_edition_2014_10_10.img")
 
-AOI = AOI::getAOI("Colorado Springs") %>%
+# Define an Area of Interest
+AOI = AOI::aoi_get("Colorado Springs") %>%
   st_transform(nlcd@crs)
+  
+output = prep_output(AOI)
+input = crop(nlcd, output, snap = "out")
 
-input = crop(nlcd, AOI, snap = 'out')
-output = prep_output(input)
+leaflet() %>% addTiles() %>% addPolygons(data = AOI)
 
 ## Nearest Neighbor
-n = resampleData(input, output, 0, method = 'nn')
+n = resampleData(input, output, method = 'nn')
 
 ## Areal Porportioning
 a = resampleData(input, output, 0, method = 'area')

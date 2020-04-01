@@ -1,2 +1,6 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
+working_scripts
+paper
+.travis.yml
+.DS_Store

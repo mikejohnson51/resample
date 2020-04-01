@@ -1,4 +1,5 @@
 library(raster)
+library(dplyr)
 
 nlcd = "/Volumes/GIS_Johnson/NLCD/NLCD_04_16/NLCD_2016_Land_Cover_L48_20190424.img" %>% raster()
 

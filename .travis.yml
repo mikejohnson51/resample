@@ -1,0 +1,50 @@
+language: r
+
+cache:
+  - packages
+  - ccache
+
+sudo: required
+dist: trusty
+latex: false
+
+r:
+  - release
+
+addons:
+  apt:
+    sources:
+      - sourceline: 'ppa:ubuntugis/ubuntugis-unstable'
+    packages:
+      - libudunits2-dev
+      - libproj-dev
+      - libgeos-dev
+      - libgdal-dev
+
+env:
+   global:
+     - R_BUILD_ARGS="--no-vignettes --no-manual"
+     - R_CHECK_ARGS="--no-vignettes --no-manual --as-cran"
+     - NOT_CRAN="true"
+     - _R_CHECK_FORCE_SUGGESTS_=false
+     - R_CODECOV=false
+
+warnings_are_errors: false
+
+r_github_packages:
+  - mikejohnson51/AOI
+  - jimhester/covr
+  - r-spatial/lwgeom
+
+script:
+  - |
+    R CMD build .
+    travis_wait 20 R CMD check HydroData*tar.gz
+
+after_success:
+  - if [[ "${R_CODECOV}" ]]; then travis_wait 20 R -e 'covr::coveralls()'; fi s
+
+notifications:
+  email:
+    on_success: change
+    on_failure: change

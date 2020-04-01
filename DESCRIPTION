@@ -7,10 +7,12 @@ Maintainer: Mike Johnson <jmj00@ucsb.edu>
 BugReports: https://github.com/mikejohnson51/resample/issues
 Description: Experimental method for resampling catergorical raster data to coarser resolutions.
 Depends:
-    R(>= 3.3.0),
-    AOI
+    R(>= 3.3.0)
 Imports:
     dplyr,
+    fastmatch,
+    gdalUtilities,
+    magrittr,
     raster,
     sf(>= 0.6-0),
     tabularaster,

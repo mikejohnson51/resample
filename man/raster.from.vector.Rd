@@ -9,7 +9,7 @@ raster.from.vector(vec, output)
 \arguments{
 \item{vec}{A vector of data}
 
-\item{output.grid}{An `sf` object}
+\item{output}{An `sf` grid to be resampled to}
 }
 \value{
 a single layer `raster`

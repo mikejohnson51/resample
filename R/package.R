@@ -3,8 +3,15 @@
 #' @docType package
 #' @name resample
 
-#' @importFrom  sf st_transform st_sf st_make_grid st_centroid st_crs
-#' @importFrom  tabularaster cellnumbers as_tibble
-#' @importFrom  dplyr group_by summarize mutate select
+NULL
+
+#' re-export magrittr pipe operator
+#' @importFrom magrittr %>%
+#' @name %>%
+#' @rdname pipe
+#' @export
 
 NULL
+
+
+utils::globalVariables(c('cellvalue', 'cellvalue_', 'count', 'n', 'object_', 'v.pct'))
