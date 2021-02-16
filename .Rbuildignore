@@ -4,3 +4,4 @@ working_scripts
 paper
 .travis.yml
 .DS_Store
+^README\.Rmd$

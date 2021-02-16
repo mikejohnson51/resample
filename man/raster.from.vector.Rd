@@ -4,11 +4,9 @@
 \alias{raster.from.vector}
 \title{Raster from Vector}
 \usage{
-raster.from.vector(vec, output)
+raster.from.vector(output)
 }
 \arguments{
-\item{vec}{A vector of data}
-
 \item{output}{An `sf` grid to be resampled to}
 }
 \value{

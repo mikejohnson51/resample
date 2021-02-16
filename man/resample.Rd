@@ -3,7 +3,6 @@
 \docType{package}
 \name{resample}
 \alias{resample}
-\alias{resample-package}
 \title{Resampling Package}
 \description{
 Experimental resampling method for categorical rasters

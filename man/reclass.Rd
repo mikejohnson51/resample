@@ -2,12 +2,12 @@
 % Please edit documentation in R/reclass_utility.R
 \name{reclass}
 \alias{reclass}
-\title{Reclassify a Distribution Table by an Count value}
+\title{Reclassify a distribution table by a count value}
 \usage{
 reclass(areal_per, output_count, no_data = 0)
 }
 \arguments{
-\item{areal_per}{the aeral percent of each cell covered by a class}
+\item{areal_per}{the areal percent of each cell covered by a class}
 
 \item{output_count}{the number of target cells for each class in the output cell}
 
@@ -17,5 +17,5 @@ reclass(areal_per, output_count, no_data = 0)
 a vector
 }
 \description{
-Reclassify a Distribution Table by an Count value
+Reclassify a distribution table by a count value
 }
