@@ -83,7 +83,7 @@ input  = crop(nlcd, AOI, snap = "out")
 
 Three resampling techniques are highlighted which include nearest neighbor, majority rule and a new method that seeks to preserve both areal proportions and map structure. Nearest neighbor and majority rule utilize GDAL `near` and `mode` resampling.
 
-For each method, an input raster and desired cell size must be provided, cell size is given with respect to the input raster CRS. In our example this is meters (see below). This is the same principle as the `-tr` flag found in GDAL utilities.
+For each method, an input raster and desired cell size must be provided. This is the same principle as the `-tr` flag found in GDAL utilities. Cell size units are given with respect to the input CRS. In our example this is meters (see below). 
 
 ```{r}
 st_crs(input)$units
@@ -135,7 +135,7 @@ plot(b[[c(4,3,2,1)]],
 
 ### Disagreement across methods
 
-Overall, we can see that ~46% of the cell, the three methods assigned different categories:
+Overall, we can see that in ~46% of the cells, the three methods assigned different categories:
 
 ```{r}
 m1 <- cbind(values(a),values(n),values(m))

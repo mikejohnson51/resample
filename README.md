@@ -58,10 +58,10 @@ neighbor, majority rule and a new method that seeks to preserve both
 areal proportions and map structure. Nearest neighbor and majority rule
 utilize GDAL `near` and `mode` resampling.
 
-For each method, an input raster and desired cell size must be provided,
-cell size is given with respect to the input raster CRS. In our example
-this is meters (see below). This is the same principle as the `-tr` flag
-found in GDAL utilities.
+For each method, an input raster and desired cell size must be provided.
+This is the same principle as the `-tr` flag found in GDAL utilities.
+Cell size units are given with respect to the input CRS. In our example
+this is meters (see below).
 
 ``` r
 st_crs(input)$units
@@ -76,7 +76,7 @@ system.time({
   n = resampleData(input, cellsize = 1000, method = 'nn')
 })
 #>    user  system elapsed 
-#>   0.287   0.060   0.369
+#>   0.345   0.054   0.588
 ```
 
 ### (2) Majority Rule
@@ -87,7 +87,7 @@ system.time({
   m = resampleData(input, cellsize = 1000,  method = 'maj')
 })
 #>    user  system elapsed 
-#>   0.891   0.065   1.287
+#>   1.006   0.071   1.709
 ```
 
 ### (3) Area Preservation
@@ -98,7 +98,7 @@ system.time({
   a = resampleData(input, cellsize = 1000,  method = 'area')
 })
 #>    user  system elapsed 
-#>   0.423   0.055   0.539
+#>   0.579   0.061   0.975
 ```
 
 ### Visualize
@@ -121,8 +121,8 @@ plot(b[[c(4,3,2,1)]],
 
 ### Disagreement across methods
 
-Overall, we can see that \~46% of the cell, the three methods assigned
-different categories:
+Overall, we can see that in \~46% of the cells, the three methods
+assigned different categories:
 
 ``` r
 m1 <- cbind(values(a),values(n),values(m))
