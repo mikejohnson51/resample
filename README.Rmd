@@ -43,6 +43,8 @@ nlcd_conus_path = '/Volumes/Backup/NLCD/NLCD_2016_Land_Cover_L48_20190424/NLCD_2
 
 <!-- badges: start -->
 [![Build Status](https://travis-ci.com/mikejohnson51/resample.svg?token=pr7qqoRsTFSB28qcSF5n&branch=master)](https://travis-ci.com/mikejohnson51/resample)
+[![DOI](https://zenodo.org/badge/219113006.svg)](https://zenodo.org/badge/latestdoi/219113006)
+
 <!-- badges: end -->
 
 This code is part of a working paper focused on resampling strategies for categorical data. The premise is that the defacto industry standards of majority rule and nearest neighbor give rise to competing objectives with respect to preserving map structure and map level class proportions.

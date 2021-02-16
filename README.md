@@ -7,6 +7,8 @@
 
 [![Build
 Status](https://travis-ci.com/mikejohnson51/resample.svg?token=pr7qqoRsTFSB28qcSF5n&branch=master)](https://travis-ci.com/mikejohnson51/resample)
+[![DOI](https://zenodo.org/badge/219113006.svg)](https://zenodo.org/badge/latestdoi/219113006)
+
 <!-- badges: end -->
 
 This code is part of a working paper focused on resampling strategies
@@ -76,7 +78,7 @@ system.time({
   n = resampleData(input, cellsize = 1000, method = 'nn')
 })
 #>    user  system elapsed 
-#>   0.345   0.054   0.588
+#>   0.271   0.053   0.335
 ```
 
 ### (2) Majority Rule
@@ -87,7 +89,7 @@ system.time({
   m = resampleData(input, cellsize = 1000,  method = 'maj')
 })
 #>    user  system elapsed 
-#>   1.006   0.071   1.709
+#>   0.778   0.041   0.837
 ```
 
 ### (3) Area Preservation
@@ -98,7 +100,7 @@ system.time({
   a = resampleData(input, cellsize = 1000,  method = 'area')
 })
 #>    user  system elapsed 
-#>   0.579   0.061   0.975
+#>   0.428   0.053   0.544
 ```
 
 ### Visualize
